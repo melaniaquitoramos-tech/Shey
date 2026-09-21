@@ -1,0 +1,30 @@
+Para Shey — Día de las Flores Amarillas
+========================================
+
+CÓMO VER LA PÁGINA
+  1. Abre el archivo index.html directamente con el navegador
+     (doble clic sobre él), o bien:
+     cd myShey && python3 -m http.server 8000
+     y entra a http://localhost:8000
+
+FOTOS
+  - Fotos del fondo: colócalas en  assets/foto_principal/
+    (principal1.jpeg, principal2.jpg...). Aparecen difuminadas
+    y mezcladas con los tonos amarillos de fondo.
+  - Fotos de la galería: ya hay 6 en assets/fotos/foto1.jpg ... foto6.jpg
+    Para agregar más: assets/fotos/foto7.jpg, foto8.jpg ...
+    Acepta jpg, jpeg, png, webp y avif.
+
+RAMOS DE FLORES
+  - Se usan las imágenes de  assets/flores/ramo1.png, ramo2.png, ramo3.png
+    (fondos transparentes). Aparecen en el inicio y el cierre.
+  - Para cambiarlos, reemplaza esos archivos con el mismo nombre.
+
+MÚSICA DE FONDO
+  - Coloca tu canción como:  assets/musica/musica.mp3
+  - Apenas exista el archivo, el botón dorado (abajo a la derecha)
+    comenzará a reproducirla al hacer clic.
+
+PERSONALIZAR
+  - El mensaje de la carta se edita en  js/main.js  (arreglo letterLines).
+  - Los colores y estilos se editan en  css/style.css.

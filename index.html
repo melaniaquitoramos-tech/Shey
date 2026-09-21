@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Shey — Día de las Flores Amarillas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Fotos de fondo difuminadas -->
+  <div class="bg-photos" aria-hidden="true">
+    <img class="img-a" src="assets/foto_principal/principal1.jpeg" alt="" />
+    <img class="img-b" src="assets/foto_principal/principal2.jpg" alt="" />
+  </div>
+
+  <!-- Fondo de pétalos cayendo -->
+  <canvas id="petals" aria-hidden="true"></canvas>
+
+  <!-- Navegación flotante -->
+  <nav class="nav" id="nav">
+    <a href="#inicio">Inicio</a>
+    <a href="#carta">Carta</a>
+    <a href="#galeria">Fotos</a>
+    <a href="#cierre">Para ti</a>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="inicio">
+    <div class="hero-orbit" aria-hidden="true">
+      <div class="bouquet bouquet-1"><img src="assets/flores/ramo1.png" alt="" /></div>
+      <div class="bouquet bouquet-2"><img src="assets/flores/ramo2.png" alt="" /></div>
+      <div class="bouquet bouquet-3"><img src="assets/flores/ramo3.png" alt="" /></div>
+    </div>
+
+    <div class="hero-content reveal">
+      <h1 class="hero-title">
+        Feliz día,<br />
+        <span class="hero-name">mi niña hermosa</span>
+      </h1>
+      <p class="hero-sub" id="hero-sub"></p>
+      <a href="#carta" class="btn btn-gold">Una carta para ti</a>
+    </div>
+
+    <a href="#carta" class="scroll-hint" aria-label="Bajar">
+      <span class="scroll-wheel"></span>
+    </a>
+  </header>
+
+  <main>
+    <!-- ============ CARTA ============ -->
+    <section class="section carta" id="carta">
+      <div class="section-head reveal">
+        <span class="eyebrow">Para ti, Shey</span>
+        <h2 class="section-title">Una carta al corazón</h2>
+        <p class="section-sub">
+          Lee hasta el final… fue escrita pensando el ti mi vida.
+        </p>
+      </div>
+
+      <div class="carta-paper reveal">
+        <p class="carta-greeting letter-line" id="carta-greeting"></p>
+        <div class="carta-body" id="carta-body"></div>
+        <p class="carta-signature">— Con todo mi amor, para ti.</p>
+      </div>
+    </section>
+
+    <!-- ============ GALERÍA ============ -->
+    <section class="section galeria" id="galeria">
+      <div class="section-head reveal">
+        <span class="eyebrow">Recuerdos</span>
+        <h2 class="section-title">Los mejores momentos</h2>
+        <p class="section-sub">
+          Cada instante contigo guardan sonrisas para toda la vida.
+        </p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-hint reveal">Cargando tus fotos…</div>
+      </div>
+      <p class="gallery-note">Haz clic en una foto para verla en grande.</p>
+    </section>
+
+    <!-- ============ CIERRE ============ -->
+    <section class="section cierre" id="cierre">
+      <div class="cierre-bouquet bouquet reveal" aria-hidden="true"><img src="assets/flores/ramo2.png" alt="" /></div>
+      <h2 class="section-title reveal">Te amo mucho</h2>
+      <p class="cierre-text reveal">
+        Eres mi sol, mi paz y mi hogar.<br />Gracias por enseñarme la
+        sencillez, el cariño y la lealtad.
+      </p>
+      <button class="btn btn-gold btn-burst reveal" id="btnBurst">
+        ¡Feliz día de las flores!
+      </button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Hecho con amor · 21 de septiembre ; Para Shey</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">&times;</button>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Anterior">&#8249;</button>
+    <img id="lightboxImg" src="" alt="Foto" />
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Siguiente">&#8250;</button>
+  </div>
+
+  <!-- Botón de música -->
+  <button class="music-btn" id="musicBtn" aria-label="Reproducir música">
+    <svg class="icon-music" viewBox="0 0 24 24" width="22" height="22">
+      <path d="M9 18V5l12-2v13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6" cy="18" r="3" fill="currentColor"/>
+      <circle cx="18" cy="16" r="3" fill="currentColor"/>
+    </svg>
+    <svg class="icon-pause" viewBox="0 0 24 24" width="22" height="22">
+      <rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+      <rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <audio id="music" src="assets/musica/musica.mp3" loop preload="auto"></audio>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
